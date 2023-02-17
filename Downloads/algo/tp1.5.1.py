@@ -32,24 +32,3 @@ plt.title('interpolation en normes 1 et infini')
 plt.show()
 
 
-"""
-
-On va le manipuler comme l'interopolation en norme 1 en commencant par
-introduire les variables z0, ..., z{n-1} telles que
-    z_i >= ax_i + b - y_i
-    z_i >= -(ax_i + b - y_i)
-pour i=0, ..., n-1 et on cherche le
-    max( Σz_i )
-En suite on pose 
-    t_i = max_i(z_i), i=0, ..., n-1
-    t_i >= z_i, pour chaque i ==> 
-    { t_i >= ax_i + b - y_i && t_i >= -(ax_i + b - y_i) }.
-Donc,
-    max(Σz_i) <= Σ(max(z_i)) <= Σ(t_i)
-==> min(max(Σ(z_i))) <= min(Σ(t_i))
-Alors notre probleme prend la forme d'optimisation lineaire suivante
-    min(Σ(t_i))
-    t_i >= ax_i + b - y_i       i=0, ..., n-1
-    t_i >= -(ax_i + b - y_i)    i=0, ..., n-1
-
-"""
