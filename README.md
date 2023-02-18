@@ -1,7 +1,7 @@
 # Algo avancé tp
 ## TP1.5.1 Interpolation infini  
 ### 1.Formalisez ce problème comme un problème d'optimisation linéaire.  
-On introduit les variables $z_0, ..., z_{n-1},  i=0, ..., n-1$ tels que
+On introduit les variables $z_0, ..., z_{n-1},  i=0, ..., n-1$ telles que
 ```math
 z_i = \| \alpha x_i + b - y_i \|_{\infty} = max |\alpha x_i + b - y_i | \geq |\alpha x_i + b - y_i | \, , \quad i=0, ..., n-1.
 ```
