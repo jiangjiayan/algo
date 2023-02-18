@@ -79,3 +79,70 @@ plt.show()
 
 <img width="752" alt="image 1" src="https://user-images.githubusercontent.com/106167157/219715975-d04f9d90-2ab0-463b-91f0-2dadb51c406b.png">
 
+## TP1.5.2 Un problème de séparation /classification  
+### On a n points rouges et n points verts dans le plan reél $R^2$
+### 1.Est-il possible de tracer une droite qui sépare les points au sens où tous les points de la même couleur sont du même côté de la droite?  
+  
+  Il n'est pas toujours possible de tracer une ligne séparant les points rouges et verts sur le plan réel. Cela dépend de la répartition des points.Les exemples suivants illustrent les cas de séparabilité et de non-séparabilité à l'aide de Python.   
+    
+   Dans ce cas, nous générons aléatoirement quelques points rouges et verts, répartis uniformément et de manière chaotique sur un graphique en nuage, ils sont non-séparables:  
+     
+```python
+import matplotlib.pyplot as plt
+import random
+
+def aléatoire(n, label):
+    points = []
+    for i in range(n):
+        x = random.uniform(-1, 1)
+        y = random.uniform(-1, 1)
+        points.append((x, y, label))
+    return points
+
+rouge = aléatoire(100, "red")
+vert = aléatoire(100, "green")
+
+x = [p[0] for p in rouge + vert]
+y = [p[1] for p in rouge + vert]
+labels = [p[2] for p in rouge + vert]
+
+plt.scatter(x, y, c=labels)
+plt.show()
+```
+
+<img width="752" alt="passéparé" src="https://user-images.githubusercontent.com/106167157/219867876-1a45ed54-c083-481d-b651-603f858434ca.png">  
+
+Lorsque nous pouvons voir à l'œil nu qu'ils sont répartis de manière régulière de part et d'autre d'une ligne droite, alors ils sont séparables.  
+
+```python
+import matplotlib.pylab as plt
+import numpy as np
+
+rouge_x = np.array([1.7,2.6,3.4,4.9,4,5.3,6.9])
+rouge_y = np.array([5,6.9,12,10,11,12.6,14.7])
+vert_x = np.array([1.0,1.4,3.5,4.1,5.2,6.0,6.7])
+vert_y = np.array([1.4,1.6,2.0,3.0,9.9,4.0,11.0])
+
+fig, ax = plt.subplots()
+ax.plot(rouge_x, rouge_y, "or",
+        color = "red",
+        markersize = 7)
+ax.plot(vert_x, vert_y, "oy",
+        color = "green",
+        markersize = 7)
+
+point_en_linge = (5, 9.9)
+X = np.arange(0,10)
+m = point_en_linge[1]/point_en_linge[0]
+ax.plot(X, m * X, "black", linewidth = 3)
+plt.show()
+```  
+
+<img width="752" alt="séparé" src="https://user-images.githubusercontent.com/106167157/219867975-f42023ca-a80b-4585-923d-66af88548450.png">  
+
+### 2.S'il une telle droitisations existe ,est-il possible d'en choisir une qui est à mi-chemin entre le point rouge et le point vert les plus proches ?  
+/solution/
+### 3.Il peut être impossible de séparer les points avec une droite .Dans ce cas,est-il possible de trouver un polynôme de degré 2,3....qui sépare les points ?
+/solution/
+### 4.En $R^n$,peut-on chercher un hyperplan affine plutôt qu'une droite(à savoir {x| $a^T$ x=b})?
+/solution/
