@@ -1,6 +1,6 @@
-# Algo avancé tp
-## TP1.5.1 Interpolation infini  
-### 1.Formalisez ce problème comme un problème d'optimisation linéaire.  
+# Algorithmique Avancée TP1
+## TP1.5.1 Interpolation en norme infini  
+### 1. Formalisez ce problème comme un problème d'optimisation linéaire.  
 On introduit les variables $z_0, ..., z_{n-1},  i=0, ..., n-1$ telles que
 ```math
 z_i = \| \alpha x_i + b - y_i \|_{\infty} = max |\alpha x_i + b - y_i | \geq |\alpha x_i + b - y_i | \, , \quad i=0, ..., n-1.
@@ -13,7 +13,7 @@ En cherchant à minimiser la plus grande difference, on cherche, en effet, à mi
 &z_i \geq -(\alpha x_i + b - y_i)
 \end{align*}
 ```
-### 2.Démontrez que votre formule capture exactement le problème.  
+### 2. Démontrez que votre formule capture exactement le problème.  
 On va montrer maintenant que $(\alpha, b)$ est une solution optimale du problème sous la forme initiale si et seulement si $(\alpha, b, \bar{z})$ est une solution optimale du problème sous la forme de l'optimisation linéaire.
 Supposons $(\alpha, b)$ optimale.
 On a bien $(\alpha, b, \bar{z})$ est une solution avec $z_i = max | \alpha x_i + b |$. On va montrer que elle est aussi optimale.
@@ -29,7 +29,7 @@ Or $(\alpha, b, \bar{z})$ est optimale, on obtient
 ```
 qui est une contradiction, alors $(\alpha, b)$ est bien optimale.
 
-### 3.Visualisez le résultat de l’interpolation en norme 1 et en norme infini en utilisant le module matplotlib.  
+### 3. Visualisez le résultat de l’interpolation en norme 1 et en norme infini en utilisant le module matplotlib.  
 Norme1: L'interpolation en norme 1 est une méthode d'approximation de fonctions qui consiste à trouver une fonction simple qui approche au mieux une fonction donnée, en minimisant la somme des valeurs absolues des différences entre les deux fonctions. Donc on choisi la même façon dans le cours:moindres carrés pour obtenir son interpolation ,et en python,on choisi la fonction 'np.polyfit(x,y,deg)' dans module numpy.  
   
   
