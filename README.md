@@ -173,8 +173,8 @@ Si les points rouges et verts sont mélangés et qu'il n'y a pas de tendance cla
 ```math
 \begin{align*}
 &max :d \\
-&a x_i^2 + bx_i - y_i \geq d  (i: point rouge)\\ 
-&a x_i^2 + bx_i - y_i \leq -d (i:point verts)\\
+&a x_i^2 + bx_i +c- y_i \geq d  (i: point rouge)\\ 
+&a x_i^2 + bx_i +c- y_i \leq -d (i:point verts)\\
 &y_i \geq 0
 \end{align*}
 ```
