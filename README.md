@@ -159,16 +159,9 @@ Oui, c'est possible de choisir une droite qui passe par le point milieu entre le
 ```
     
 ### 3.Il peut être impossible de séparer les points avec une droite .Dans ce cas,est-il possible de trouver un polynôme de degré 2,3....qui sépare les points ?
-Si les points rouges et verts sont mélangés et qu'il n'y a pas de tendance claire à les séparer, il peut être impossible de trouver un polynôme de degré 2 ou supérieur qui les sépare.Si leur distribution est régulière， il est possible de trouver un polynôme de degré 2, 3, ... qui peut séparer les points s'ils sont séparables et qu'une droite ne peut pas les séparer. On fait un exemple suivant en degré 2(même si on peut le trouver ,il est non-linéaire ):  
-1.On assure les points rouge sont au-dessus de cette lignes et les verts sont au-dessous.Et la fonction de la parabole est f(x) = $ax^2$ +bx+c,pour tout $f(x)\geq y$ (les points rouges),et pour tout $f(x)\leq y$ (les points verts)  
-2.Avec la façon de 'quadratic programming',son norme est :  
-```math
-\begin{align*}
-&min x 
-&\frac{1}{2} x^T Gx+ x^Tc
-\end{align*}
-```  
-3.On ajouter deux variables aussi,y:il représente la carré de la distance ,et d est une valeur limite.  
+Si les points rouges et verts sont mélangés et qu'il n'y a pas de tendance claire à les séparer, il peut être impossible de trouver un polynôme de degré 2 ou supérieur qui les sépare.Si leur distribution est régulière， il est possible de trouver un polynôme de degré 2, 3, ... qui peut séparer les points s'ils sont séparables et qu'une droite ne peut pas les séparer. On fait un exemple suivant en degré 2(même si on peut le trouver, il est non-linéaire ):  
+1.On assure les points rouge sont au-dessus de cette lignes et les verts sont au-dessous.Et la fonction de la parabole est $f(x) = ax^2 +bx+c$, pour tout $f(x)\geq y$ (les points rouges),et pour tout $f(x)\leq y$ (les points verts).  
+2.On ajoute la variable $d$ qui est une valeur limite.  
 4.La fonction objectif est :
 ```math
 \begin{align*}
@@ -179,7 +172,3 @@ Si les points rouges et verts sont mélangés et qu'il n'y a pas de tendance cla
 \end{align*}
 ```
 
-
-
-### 4.En $R^n$,peut-on chercher un hyperplan affine plutôt qu'une droite(à savoir {x| $a^T$ x=b})?
-/solution/
