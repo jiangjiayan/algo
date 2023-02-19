@@ -140,7 +140,7 @@ plt.show()
 
 <img width="752" alt="séparé" src="https://user-images.githubusercontent.com/106167157/219867975-f42023ca-a80b-4585-923d-66af88548450.png">  
 
-### 2.S'il une telle droitisations existe ,est-il possible d'en choisir une qui est à mi-chemin entre le point rouge et le point vert les plus proches ?  
+### 2.Si une telle droitisations existe, est-il possible d'en choisir une qui est à mi-chemin entre le point rouge et le point vert les plus proches ?  
 Oui, c'est possible de choisir une droite qui passe par le point milieu entre le point rouge et le point vert les plus proches.Cependant, cette méthode ne garantit pas qu'il y aura une telle droite qui passe par le point milieu pour tous les ensembles de points rouges et verts.Donc,on ne considère que le cas séparable.  
   
   La condition de contrainte est qu'on assure les points rouge sont au-dessus de cette lignes et les verts sont au-dessous(Comme l'image précédente). C’est à dire si on fait cette ligne est f(x)= ax +b,les points rouges $\geq$ f(x), et les points verts $\leq$ f(x).
